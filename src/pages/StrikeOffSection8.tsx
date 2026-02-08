@@ -77,9 +77,9 @@ function StrikeOffSection8() {
         ]}
         faqs={faqs}
       >
-        <section className="rounded-3xl bg-white p-8 shadow-xl space-y-10">
+        <section className="rounded-3xl bg-white p-6 shadow-xl space-y-10 sm:p-8">
           <div>
-            <h2 className="text-3xl font-bold text-slate-900">Introduction</h2>
+            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Introduction</h2>
             <p className="mt-3 text-base text-slate-800">
               A Section-8 company exists for nonprofit objectives and applies its income to its mission. Strike off is
               a formal closure route under MCA when the company is inactive and compliant, resulting in removal from
@@ -88,7 +88,7 @@ function StrikeOffSection8() {
           </div>
 
           <div>
-            <h2 className="text-3xl font-bold text-slate-900">Eligibility to Strike Off</h2>
+            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Eligibility to Strike Off</h2>
             <ol className="mt-5 space-y-4 list-decimal pl-6">
               {[
                 "The company did not commence operations within one year of incorporation",
@@ -103,7 +103,7 @@ function StrikeOffSection8() {
           </div>
 
           <div>
-            <h2 className="text-3xl font-bold text-slate-900">Advantages of Strike Off</h2>
+            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Advantages of Strike Off</h2>
             <div className="mt-6 grid gap-6 md:grid-cols-2">
               {[
                 "Fast closure for inactive, no‑creditor companies; with creditors, a prior notice period is required before applying",
@@ -123,7 +123,7 @@ function StrikeOffSection8() {
 
 
           <div>
-            <h2 className="text-3xl font-bold text-slate-900">Types of Strike Off</h2>
+            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Types of Strike Off</h2>
             <div className="mt-5 space-y-4">
               <div className="rounded-2xl border border-slate-200 bg-white p-5">
                 <h3 className="text-base font-semibold text-slate-900">Strike off by ROC</h3>
@@ -143,7 +143,7 @@ function StrikeOffSection8() {
           </div>
 
           <div>
-            <h2 className="text-3xl font-bold text-slate-900">Documents Required</h2>
+            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Documents Required</h2>
             <ol className="mt-5 space-y-4 list-decimal pl-6">
               {[
                 "Certified true copy of the special resolution with meeting notice and explanatory statement",
@@ -167,7 +167,7 @@ function StrikeOffSection8() {
 
 
           <div>
-            <h2 className="text-3xl font-bold text-slate-900">Procedure Overview</h2>
+            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Procedure Overview</h2>
             <div className="mt-5 grid gap-4 md:grid-cols-2">
               {[
                 "Hold board meeting and general meeting to approve surrender and strike off proposal",

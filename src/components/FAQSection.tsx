@@ -32,14 +32,14 @@ function FAQSection({ title, faqs }: FAQSectionProps) {
     };
 
     return (
-        <section className="mt-8 w-full rounded-3xl bg-white p-8 shadow-xl">
+        <section className="mt-8 w-full rounded-3xl bg-white p-6 shadow-xl sm:p-8">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
             />
             <div className="mx-auto max-w-5xl text-center">
-                <p className="text-sm font-semibold uppercase tracking-wide text-blue-700">FAQs</p>
-                <h2 className="mt-2 text-3xl font-bold text-slate-900">{title} FAQs</h2>
+                <p className="text-xs font-semibold uppercase tracking-wide text-blue-700 sm:text-sm">FAQs</p>
+                <h5 className="mt-2 text-2xl font-bold text-slate-900 sm:text-3xl">{title} FAQs</h5>
                 <p className="mt-3 text-sm text-slate-800">
                     Common questions answered by our experts.
                 </p>
@@ -49,19 +49,20 @@ function FAQSection({ title, faqs }: FAQSectionProps) {
                 {resolvedFaqs.map((faq, index) => {
                     const isOpen = openIndex === index;
                     return (
-                        <div key={faq.question} className="self-start rounded-2xl border border-slate-200 bg-slate-50 p-5">
-                            <button
-                                type="button"
-                                onClick={() => setOpenIndex(isOpen ? null : index)}
-                                className="flex w-full cursor-pointer items-center justify-between gap-4 text-left text-base font-semibold text-slate-900"
-                                aria-expanded={isOpen}
-                            >
+                        <button
+                            key={faq.question}
+                            type="button"
+                            onClick={() => setOpenIndex(isOpen ? null : index)}
+                            className="self-start cursor-pointer rounded-2xl border border-slate-200 bg-slate-50 p-5 text-left"
+                            aria-expanded={isOpen}
+                        >
+                            <div className="flex w-full cursor-pointer items-center justify-between gap-4 text-base font-semibold text-slate-900">
                                 <span>{faq.question}</span>
                                 <span className="relative inline-flex h-6 w-6 items-center justify-center rounded-full border border-slate-300 text-slate-800">
                                     <span className="absolute h-0.5 w-3 bg-slate-600" />
                                     <span className={`absolute h-3 w-0.5 bg-slate-600 transition-opacity ${isOpen ? "opacity-0" : "opacity-100"}`} />
                                 </span>
-                            </button>
+                            </div>
                             <div
                                 className={`grid transition-all duration-300 ease-out ${isOpen ? "grid-rows-[1fr] opacity-100 mt-3" : "grid-rows-[0fr] opacity-0"}`}
                             >
@@ -69,7 +70,7 @@ function FAQSection({ title, faqs }: FAQSectionProps) {
                                     <p className="text-sm text-slate-800">{faq.answer}</p>
                                 </div>
                             </div>
-                        </div>
+                        </button>
                     );
                 })}
             </div>

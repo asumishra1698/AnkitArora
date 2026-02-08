@@ -6,6 +6,7 @@ type SeoProps = {
   image?: string;
   canonicalUrl?: string;
   robots?: string;
+  keywords?: string;
 };
 
 const DEFAULT_IMAGE = "/LOGO.png";
@@ -31,13 +32,32 @@ function upsertLink(rel: string, href: string) {
   element.setAttribute("href", href);
 }
 
-function Seo({ title, description, image = DEFAULT_IMAGE, canonicalUrl, robots }: SeoProps) {
+function buildKeywords(title: string, description: string) {
+  const shortDescription = description.split(/\s+/).slice(0, 16).join(" ");
+  return [
+    title,
+    `${title} services`,
+    `${title} consultation`,
+    shortDescription,
+  ]
+    .filter(Boolean)
+    .join(", ");
+}
+
+function Seo({ title, description, image = DEFAULT_IMAGE, canonicalUrl, robots, keywords }: SeoProps) {
   useEffect(() => {
     document.title = title;
+
+    const resolvedKeywords = keywords?.trim() || buildKeywords(title, description);
 
     upsertMeta('meta[name="description"]', {
       name: "description",
       content: description,
+    });
+
+    upsertMeta('meta[name="keywords"]', {
+      name: "keywords",
+      content: resolvedKeywords,
     });
 
     upsertMeta('meta[property="og:title"]', {
@@ -85,9 +105,7 @@ function Seo({ title, description, image = DEFAULT_IMAGE, canonicalUrl, robots }
       content: image,
     });
 
-    if (canonicalUrl) {
-      upsertLink("canonical", canonicalUrl);
-    }
+    upsertLink("canonical", canonicalUrl || window.location.href);
 
     if (robots) {
       upsertMeta('meta[name="robots"]', {
@@ -100,7 +118,7 @@ function Seo({ title, description, image = DEFAULT_IMAGE, canonicalUrl, robots }
         robotsMeta.remove();
       }
     }
-  }, [title, description, image, canonicalUrl, robots]);
+  }, [title, description, image, canonicalUrl, robots, keywords]);
 
   return null;
 }

@@ -10,6 +10,7 @@ type SimplePageProps = {
   points?: DescriptionColumn[];
   children?: ReactNode;
   faqs?: FAQItem[];
+  keywords?: string;
 };
 
 type DescriptionColumn = {
@@ -21,7 +22,7 @@ function isDescriptionColumn(value: string | DescriptionColumn): value is Descri
   return typeof value === "object" && value !== null && "items" in value;
 }
 
-function SimplePage({ title, description, points, children, faqs }: SimplePageProps) {
+function SimplePage({ title, description, points, children, faqs, keywords }: SimplePageProps) {
   const seoDescription = (() => {
     if (typeof description === "string") {
       return description;
@@ -51,6 +52,7 @@ function SimplePage({ title, description, points, children, faqs }: SimplePagePr
       <Seo
         title={`${title} | Arora Ankit & Associates`}
         description={seoDescription}
+        keywords={keywords}
       />
       <BannerSection title={title} description={description}>
         {points && points.length > 0 ? (

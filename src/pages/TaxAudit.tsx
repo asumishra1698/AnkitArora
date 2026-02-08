@@ -87,9 +87,9 @@ function TaxAudit() {
         ]}
         faqs={faqs}
       >
-        <section className="rounded-3xl bg-white p-8 shadow-xl space-y-10">
+        <section className="rounded-3xl bg-white p-6 shadow-xl space-y-10 sm:p-8">
           <div>
-            <h2 className="text-3xl font-bold text-slate-900">Tax Audit Service Overview</h2>
+            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Tax Audit Service Overview</h2>
             <p className="mt-3 text-base text-slate-800">
               Tax audit is a statutory review of books of accounts under the Income Tax Act. Arora Ankit And
               Associates provides Tax Audit Service support in Delhi NCR and India, validating records,
@@ -98,7 +98,7 @@ function TaxAudit() {
           </div>
 
           <div>
-            <h2 className="text-3xl font-bold text-slate-900">Objectives of Tax Audit</h2>
+            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Objectives of Tax Audit</h2>
             <p className="mt-3 text-base text-slate-800">
               A tax audit is carried out with clear objectives to strengthen reporting, compliance, and accuracy.
               Our Tax Audit Service focuses on transparent disclosures and audit-ready documentation.
@@ -119,7 +119,7 @@ function TaxAudit() {
           </div>
 
           <div>
-            <h2 className="text-3xl font-bold text-slate-900">Tax Audit Applicability</h2>
+            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Tax Audit Applicability</h2>
             <p className="mt-3 text-base text-slate-800">
               The Best Tax Audit Service starts with determining applicability under Section 44AB and related
               presumptive taxation rules.
@@ -138,7 +138,7 @@ function TaxAudit() {
           </div>
 
           <div>
-            <h2 className="text-3xl font-bold text-slate-900">Mandatory Tax Audit Thresholds</h2>
+            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Mandatory Tax Audit Thresholds</h2>
             <p className="mt-3 text-base text-slate-800">
               The table below summarizes when tax audit under Section 44AB becomes mandatory, based on category and
               threshold conditions. Arora Ankit And Associates provides Tax Audit Service in Delhi NCR and India
@@ -235,7 +235,7 @@ function TaxAudit() {
           </div>
 
           <div>
-            <h2 className="text-3xl font-bold text-slate-900">Tax Audit Report Filing Process</h2>
+            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Tax Audit Report Filing Process</h2>
             <p className="mt-3 text-base text-slate-800">
               Follow these steps to complete Tax Audit Service reporting on the income tax portal.
             </p>
@@ -255,7 +255,7 @@ function TaxAudit() {
           </div>
 
           <div>
-            <h2 className="text-3xl font-bold text-slate-900">Rules for Auditing Tax</h2>
+            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Rules for Auditing Tax</h2>
             <ul className="mt-5 space-y-4 list-disc pl-6">
               {[
                 "If a taxpayer runs multiple businesses and the combined turnover exceeds INR 1 crore, tax audit is mandatory.",
@@ -280,7 +280,7 @@ function TaxAudit() {
           </div>
 
           <div>
-            <h2 className="text-3xl font-bold text-slate-900">Penalty for Non-Compliance</h2>
+            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Penalty for Non-Compliance</h2>
             <p className="mt-3 text-base text-slate-800">
               If a taxpayer who is required to undergo tax audit fails to do so, the penalty can be the lower of the
               following amounts:
@@ -298,7 +298,7 @@ function TaxAudit() {
           </div>
 
           <div>
-            <h2 className="text-3xl font-bold text-slate-900">Penalty Waiver Conditions</h2>
+            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Penalty Waiver Conditions</h2>
             <p className="mt-3 text-base text-slate-800">
               Penalty may be waived when the taxpayer demonstrates a reasonable cause for non-compliance, such as:
             </p>
@@ -316,7 +316,7 @@ function TaxAudit() {
           </div>
 
           <div>
-            <h2 className="text-3xl font-bold text-slate-900">Benefits of Timely Tax Audit Compliance</h2>
+            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Benefits of Timely Tax Audit Compliance</h2>
             <p className="mt-3 text-base text-slate-800">
               Choosing a Tax Audit Service in India helps reduce risks and improves reporting quality across
               financial statements and tax filings.
@@ -339,7 +339,7 @@ function TaxAudit() {
           </div>
 
           <div>
-            <h2 className="text-3xl font-bold text-slate-900">Key Tax Audit Coverage Areas</h2>
+            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Key Tax Audit Coverage Areas</h2>
             <p className="mt-3 text-base text-slate-800">
               Our Tax Audit Service coverage spans statutory registers, reconciliations, and tax clause disclosures.
             </p>
