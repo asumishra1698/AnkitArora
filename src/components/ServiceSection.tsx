@@ -59,7 +59,7 @@ function ServiceSection({
     <section className={`w-full ${backgroundClassName} px-6 py-14 sm:px-10 lg:px-16`}>
       <div className="flex flex-col items-center gap-3 text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-700">{eyebrow}</p>
-        <h2 className="text-2xl font-semibold text-slate-900">{title}</h2>
+        <h3 className="text-2xl font-semibold text-slate-900">{title}</h3>
         <p className="text-sm text-slate-800">{description}</p>
       </div>
       <div className={gridClassName}>
@@ -78,7 +78,7 @@ function ServiceSection({
             {card.icon ? (
               <div className={iconWrapperFor(card)}>{card.icon}</div>
             ) : null}
-            <h3 className="mt-5 text-[1.2rem] font-semibold text-slate-900">{card.title}</h3>
+            <h2 className="mt-5 text-[1.2rem] font-semibold text-slate-900">{card.title}</h2>
             <p className="mt-3 text-sm text-slate-800">{card.description}</p>
             <span className={learnMoreClass}>
               Learn more

@@ -121,7 +121,8 @@ function Home() {
     <div>
       <Seo
         title="Arora Ankit & Associates | Chartered Accountants in Delhi"
-        description="Delhi-based chartered accountants for business registration, GST, ROC filings, audits, and advisory services."
+        keywords="Chartered Accountants, Delhi, Business Registration, GST, ROC Filings, Audits, Advisory Services"
+        description="Delhi-based chartered accountants for startups, NGOs, and SMEs. Expert services in company registration, GST, ROC filings, audits, and advisory."
       />
       <script
         type="application/ld+json"
