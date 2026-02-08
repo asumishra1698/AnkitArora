@@ -96,10 +96,8 @@ function Header() {
                 src={brand.logo}
                 alt={brand.name}
                 title={brand.name}
-                className="h-auto w-auto max-w-[180px] sm:h-auto sm:max-w-[200px] md:h-auto md:max-w-[280px]"
-              />
-              {/* <p className="text-lg font-semibold text-slate-900">{brand.name}</p> */}
-              {/* <p className="text-xs text-slate-500">{brand.tagline}</p> */}
+                className="h-auto w-auto max-w-[280px] sm:h-auto sm:max-w-[200px] md:h-auto md:max-w-[280px]"
+              />              
             </div>
           </Link>
 

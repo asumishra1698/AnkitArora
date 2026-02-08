@@ -38,12 +38,12 @@ function BannerSection({ title, description, formTitle = "Get a Consultation by 
             <div className="w-full px-4 py-10 sm:px-8 sm:py-12 lg:px-16 lg:py-16">
                 <div className="grid items-start gap-10 lg:grid-cols-12">
                     <div className="min-w-0 lg:col-span-8">
-                        <p className="text-sm font-semibold uppercase tracking-wide text-blue-700">Trusted advisors in Delhi</p>
-                        <h1 className="mt-4 max-w-full break-words text-3xl font-bold text-slate-900 sm:text-4xl lg:text-5xl">
+                        <p className="text-sm font-semibold uppercase tracking-wide text-blue-700 text-center lg:text-left">Trusted advisors in Delhi</p>
+                        <h1 className="mt-4 max-w-full break-words text-3xl font-bold text-slate-900 sm:text-4xl lg:text-5xl text-center lg:text-left">
                             {title}
                         </h1>
                         {isColumnDescription ? (
-                            <div className="mt-6 grid gap-8 md:grid-cols-2">
+                            <div className="mt-6 grid gap-8 md:grid-cols-2 text-center md:text-left lg:text-left">
                                 {(description as DescriptionColumn[]).map((column) => (
                                     <div key={column.title || column.items.join("-")}
                                         className="space-y-4">
@@ -89,13 +89,13 @@ function BannerSection({ title, description, formTitle = "Get a Consultation by 
                                 ))}
                             </ul>
                         ) : (
-                            <div className="mt-4 max-w-full break-words space-y-4 text-base text-slate-800 sm:text-lg">
+                            <div className="mt-4 max-w-full break-words space-y-4 text-base text-slate-800 sm:text-lg text-center lg:text-left">
                                 {paragraphParts.map((part, index) => (
                                     <p key={`${title}-desc-${index}`}>{part}</p>
                                 ))}
                             </div>
                         )}
-                        <div className="mt-6 flex flex-wrap items-center gap-4">
+                        <div className="mt-6 flex flex-wrap items-center gap-4 justify-center lg:justify-start">
                             <a
                                 href={`tel:${contact.phone.replace(/\s+/g, "")}`}
                                 className="inline-flex items-center justify-center gap-2 rounded-xl border border-blue-900 px-5 py-3 text-sm font-semibold text-blue-900 hover:bg-blue-50"

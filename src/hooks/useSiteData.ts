@@ -47,7 +47,7 @@ export default function useSiteData(): SiteData {
       contact: {
         email: "admin@aroraankitandassociates.com",
         phone: "+91-9999 241024",
-        location: "S4, Shree Gopal Nagar, Gopalpura Bypass, Delhi-302019",
+        location: "Shahdara, East Delhi, Delhi, India 110092",
         mapUrl: "https://maps.google.com",
       },
       social: {
@@ -64,15 +64,15 @@ export default function useSiteData(): SiteData {
               title: "Business Registration",
               links: [
                 { label: "Company Registration", to: "/start-business/company-registration" },
-                { label: "Private Limited Company Registration", to: "/start-business/private-limited" },
-                { label: "Public Limited Company Registration", to: "/start-business/public-limited" },
-                { label: "Limited Liability Partnership Registration", to: "/start-business/llp" },
-                { label: "One Person Company Registration", to: "/start-business/opc" },
-                { label: "Nidhi Company Registration", to: "/start-business/nidhi" },
-                { label: "Producer Company Registration", to: "/start-business/producer" },
-                { label: "Foreign Company Registration", to: "/start-business/foreign-company" },
-                { label: "Partnership Registration", to: "/start-business/partnership" },
-                { label: "Sole Proprietorship Registration", to: "/start-business/sole-proprietorship" },
+                { label: "Private Limited Company Registration", to: "/start-business/private-limited-company-registration" },
+                { label: "Public Limited Company Registration", to: "/start-business/public-limited-company-registration" },
+                { label: "Limited Liability Partnership Registration", to: "/start-business/llp-registration" },
+                { label: "One Person Company Registration", to: "/start-business/opc-registration" },
+                { label: "Nidhi Company Registration", to: "/start-business/nidhi-company-registration" },
+                { label: "Producer Company Registration", to: "/start-business/producer-company-registration" },
+                { label: "Foreign Company Registration", to: "/start-business/foreign-company-registration" },
+                { label: "Partnership Registration", to: "/start-business/partnership-registration" },
+                { label: "Sole Proprietorship Registration", to: "/start-business/sole-proprietorship-registration" },
               ],
             },
             {
@@ -84,7 +84,7 @@ export default function useSiteData(): SiteData {
                 { label: "ISO Certification", to: "/licenses/iso-certification" },
                 { label: "RERA Registration", to: "/licenses/rera-registration" },
                 { label: "MSME Udyam Registration", to: "/licenses/msme-udyam" },
-                { label: "Shop Act Registration", to: "/licenses/shop-act" },
+                { label: "Shop Act Registration", to: "/licenses/shop-act-registration" },
                 { label: "Business Registration Number (BRN)", to: "/licenses/brn" },
                 { label: "Startup Registration", to: "/licenses/startup-registration" },
               ],
@@ -180,11 +180,11 @@ export default function useSiteData(): SiteData {
         {
           title: "Business Registration",
           links: [
-            { label: "Private Limited Company Registration", to: "/start-business/private-limited" },
-            { label: "Public Limited Company Registration", to: "/start-business/public-limited" },
-            { label: "One Person Company Registration", to: "/start-business/opc" },
+            { label: "Private Limited Company Registration", to: "/start-business/private-limited-company-registration" },
+            { label: "Public Limited Company Registration", to: "/start-business/public-limited-company-registration" },
+            { label: "One Person Company Registration", to: "/start-business/opc-registration" },
             { label: "Company Registration", to: "/start-business/company-registration" },
-            { label: "Foreign Company Registration", to: "/start-business/foreign-company" },
+            { label: "Foreign Company Registration", to: "/start-business/foreign-company-registration" },
           ],
         },
         {

@@ -67,22 +67,22 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/start-business" element={<StartBusiness />} />
         <Route path="/start-business/company-registration" element={<CompanyRegistration />} />
-        <Route path="/start-business/private-limited" element={<PrivateLimited />} />
-        <Route path="/start-business/public-limited" element={<PublicLimited />} />
-        <Route path="/start-business/llp" element={<LLPRegistration />} />
-        <Route path="/start-business/opc" element={<OnePersonCompany />} />
-        <Route path="/start-business/nidhi" element={<NidhiCompany />} />
-        <Route path="/start-business/producer" element={<ProducerCompany />} />
-        <Route path="/start-business/foreign-company" element={<ForeignCompany />} />
-        <Route path="/start-business/partnership" element={<PartnershipRegistration />} />
-        <Route path="/start-business/sole-proprietorship" element={<SoleProprietorship />} />
+        <Route path="/start-business/private-limited-company-registration" element={<PrivateLimited />} />
+        <Route path="/start-business/public-limited-company-registration" element={<PublicLimited />} />
+        <Route path="/start-business/llp-registration" element={<LLPRegistration />} />
+        <Route path="/start-business/opc-registration" element={<OnePersonCompany />} />
+        <Route path="/start-business/nidhi-company-registration" element={<NidhiCompany />} />
+        <Route path="/start-business/producer-company-registration" element={<ProducerCompany />} />
+        <Route path="/start-business/foreign-company-registration" element={<ForeignCompany />} />
+        <Route path="/start-business/partnership-registration" element={<PartnershipRegistration />} />
+        <Route path="/start-business/sole-proprietorship-registration" element={<SoleProprietorship />} />
         <Route path="/licenses/gst-registration" element={<GSTRegistration />} />
         <Route path="/licenses/fssai-registration" element={<FSSAIRegistration />} />
         <Route path="/licenses/import-export-code" element={<ImportExportCode />} />
         <Route path="/licenses/iso-certification" element={<ISOCertification />} />
         <Route path="/licenses/rera-registration" element={<RERARegistration />} />
         <Route path="/licenses/msme-udyam" element={<MSMEUdyam />} />
-        <Route path="/licenses/shop-act" element={<ShopActRegistration />} />
+        <Route path="/licenses/shop-act-registration" element={<ShopActRegistration />} />
         <Route path="/licenses/brn" element={<BusinessRegistrationNumber />} />
         <Route path="/licenses/startup-registration" element={<StartupRegistration />} />
         <Route path="/ngo" element={<NGO />} />

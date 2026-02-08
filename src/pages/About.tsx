@@ -7,6 +7,7 @@ import Seo from "../components/Seo";
 import OurCustomers from "../components/OurCustomers";
 import useSiteData from "../hooks/useSiteData";
 import Reveal from "../components/Reveal";
+import CTASection from "../components/CTASection";
 
 function About() {
   const { brand, contact } = useSiteData();
@@ -168,27 +169,12 @@ function About() {
 
       <Reveal><OurCustomers /></Reveal>
 
-      <Reveal>
-        <section className="bg-blue-900">
-          <div className="w-full px-16 py-14 text-white">
-            <div className="flex flex-wrap items-center justify-between gap-6">
-              <div>
-                <h3 className="text-2xl font-semibold">Need help with business compliance?</h3>
-                <p className="mt-2 text-blue-100">
-                  Speak with our experts for a tailored checklist and timeline for your organization.
-                </p>
-              </div>
-              <Link
-                to="/contact"
-                className="rounded-xl bg-white px-6 py-3 text-sm font-semibold text-blue-900"
-                title="Request a Call Back"
-              >
-                Request a Call Back
-              </Link>
-            </div>
-          </div>
-        </section>
-      </Reveal>
+       <CTASection
+        title="Need help with business compliance?"
+        description="Speak with our experts for a tailored checklist and timeline for your organization."
+        ctaLabel="Request a Call Back"
+        ctaTo="/contact"
+      />
     </div>
   );
 }

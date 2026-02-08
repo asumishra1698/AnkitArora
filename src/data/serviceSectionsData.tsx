@@ -4,7 +4,7 @@ export const businessServices: ServiceCard[] = [
   {
     title: "Foreign Company Registration",
     description: "Set up a foreign company in India with structured filings and approvals.",
-    to: "/start-business/foreign-company",
+    to: "/start-business/foreign-company-registration",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
         <rect x="10" y="20" width="44" height="30" rx="4" fill="#2EAD4A" />
@@ -23,7 +23,7 @@ export const businessServices: ServiceCard[] = [
   {
     title: "Private Limited Company",
     description: "Popular entity structure for startups seeking credibility and growth.",
-    to: "/start-business/private-limited",
+    to: "/start-business/private-limited-company-registration",
     icon: (
       <svg className="h-6 w-6 text-emerald-500" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
         <path d="M4 7h16a2 2 0 012 2v9a2 2 0 01-2 2H4a2 2 0 01-2-2V9a2 2 0 012-2zm2 0V5a4 4 0 118 0v2h-2V5a2 2 0 10-4 0v2H6z" />
@@ -33,7 +33,7 @@ export const businessServices: ServiceCard[] = [
   {
     title: "Public Limited Company",
     description: "Suitable for businesses raising capital from the public.",
-    to: "/start-business/public-limited",
+    to: "/start-business/public-limited-company-registration",
     icon: (
       <svg className="h-6 w-6 text-emerald-500" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
         <path d="M12 2l8 4v6c0 5.5-3.4 9.8-8 10-4.6-.2-8-4.5-8-10V6l8-4zm0 4.1L6 8.2V12c0 4.2 2.4 7.5 6 7.9 3.6-.4 6-3.7 6-7.9V8.2L12 6.1z" />
@@ -43,7 +43,7 @@ export const businessServices: ServiceCard[] = [
   {
     title: "LLP Registration",
     description: "Ideal for professional firms needing flexibility and limited liability.",
-    to: "/start-business/llp",
+    to: "/start-business/llp-registration",
     icon: (
       <svg className="h-6 w-6 text-emerald-500" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
         <path d="M12 3a9 9 0 109 9 9 9 0 00-9-9zm1 4v5h4v2h-6V7z" />
@@ -53,7 +53,7 @@ export const businessServices: ServiceCard[] = [
   {
     title: "Nidhi Company Registration",
     description: "Support for mutual benefit societies with member deposits and lending.",
-    to: "/start-business/nidhi",
+    to: "/start-business/nidhi-company-registration",
     icon: (
       <svg className="h-6 w-6 text-emerald-500" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
         <path d="M12 2l4 7h-8l4-7zm-7 9h14v9H5v-9zm3 2v5h2v-5H8zm6 0v5h2v-5h-2z" />
@@ -63,7 +63,7 @@ export const businessServices: ServiceCard[] = [
   {
     title: "Producer Company Registration",
     description: "Ideal for farmers and producer groups seeking a formal structure.",
-    to: "/start-business/producer",
+    to: "/start-business/producer-company-registration",
     icon: (
       <svg className="h-6 w-6 text-emerald-500" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
         <path d="M12 3l7 7-7 11-7-11 7-7zm0 3.2L8.4 9.4 12 15l3.6-5.6L12 6.2z" />
@@ -73,7 +73,7 @@ export const businessServices: ServiceCard[] = [
   {
     title: "One Person Company",
     description: "Single founder setup with corporate structure and limited liability.",
-    to: "/start-business/opc",
+    to: "/start-business/opc-registration",
     icon: (
       <svg className="h-6 w-6 text-emerald-500" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
         <path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-3.3 0-6 1.6-6 3.5V20h12v-2.5C18 15.6 15.3 14 12 14z" />
@@ -83,7 +83,7 @@ export const businessServices: ServiceCard[] = [
   {
     title: "Partnership Registration",
     description: "Simple partnership setup with clear deed drafting and filings.",
-    to: "/start-business/partnership",
+    to: "/start-business/partnership-registration",
     icon: (
       <svg className="h-6 w-6 text-emerald-500" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
         <path d="M7 12a3 3 0 110-6 3 3 0 010 6zm10 0a3 3 0 110-6 3 3 0 010 6zM3 20v-1c0-2.2 2.7-4 6-4 1.4 0 2.7.3 3.7.8-1.1.9-1.7 2-1.7 3.2V20H3zm18 0h-8v-1c0-1.2-.6-2.3-1.7-3.2 1-.5 2.3-.8 3.7-.8 3.3 0 6 1.8 6 4v1z" />

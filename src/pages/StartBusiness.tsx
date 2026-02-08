@@ -10,47 +10,47 @@ const businessRegistrationLinks = [
   {
     title: "Private Limited Company Registration",
     description: "Most preferred structure for funded startups.",
-    to: "/start-business/private-limited",
+    to: "/start-business/private-limited-company-registration",
   },
   {
     title: "Public Limited Company Registration",
     description: "Raise capital from the public with compliance support.",
-    to: "/start-business/public-limited",
+    to: "/start-business/public-limited-company-registration",
   },
   {
     title: "Limited Liability Partnership Registration",
     description: "Flexible ownership with limited liability protection.",
-    to: "/start-business/llp",
+    to: "/start-business/llp-registration",
   },
   {
     title: "One Person Company Registration",
     description: "Single founder setup with corporate identity.",
-    to: "/start-business/opc",
+    to: "/start-business/opc-registration",
   },
   {
     title: "Nidhi Company Registration",
     description: "Mutual benefit structure for member lending.",
-    to: "/start-business/nidhi",
+    to: "/start-business/nidhi-company-registration",
   },
   {
     title: "Producer Company Registration",
     description: "Built for farmer and producer collectives.",
-    to: "/start-business/producer",
+    to: "/start-business/producer-company-registration",
   },
   {
     title: "Foreign Company Registration",
     description: "Set up a foreign business presence in India.",
-    to: "/start-business/foreign-company",
+    to: "/start-business/foreign-company-registration",
   },
   {
     title: "Partnership Registration",
     description: "Simple firm setup with clear partnership deed.",
-    to: "/start-business/partnership",
+    to: "/start-business/partnership-registration",
   },
   {
     title: "Sole Proprietorship Registration",
     description: "Fast and lightweight registration for solo owners.",
-    to: "/start-business/sole-proprietorship",
+    to: "/start-business/sole-proprietorship-registration",
   },
 ];
 
@@ -88,7 +88,7 @@ const licenseLinks = [
   {
     title: "Shop Act Registration",
     description: "State-wise shop and establishment license.",
-    to: "/licenses/shop-act",
+    to: "/licenses/shop-act-registration",
   },
   {
     title: "Business Registration Number (BRN)",

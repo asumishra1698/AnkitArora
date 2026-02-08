@@ -47,9 +47,9 @@ const faqs = [
 function NidhiCompany() {
   return (
     <SimplePage
-      title="Nidhi Company Registration in Delhi"
+      title="Nidhi Company Registration"
       keywords="Nidhi Company Registration, Nidhi Company Registration In Delhi NCR"
-      description="Nidhi Company Registration in Delhi made simple with Arora Ankit And Associates. We manage incorporation, member onboarding, and compliance guidance under the Nidhi Rules."
+      description="Register a Nidhi Company with Arora Ankit And Associates in Delhi NCR. We help you meet the requirements, prepare documents, and file for incorporation under SPICe+."
       points={[
         {
           title: "Advantages",

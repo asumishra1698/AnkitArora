@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import CTASection from "../components/CTASection";
 import Seo from "../components/Seo";
 import Reveal from "../components/Reveal";
 import useSiteData from "../hooks/useSiteData";
@@ -49,46 +50,14 @@ function Blog() {
         </section>
       </Reveal>
 
-      <section className="w-full px-16 py-14">
-        <h2 className="text-2xl font-semibold text-slate-900">Popular Services</h2>
-        <div className="mt-6 grid gap-6 md:grid-cols-3">
-          {[
-            "Company & LLP Registration",
-            "GST Registration & Filing",
-            "Trademark & IP Support",
-            "NGO Registration & Audit",
-            "Income Tax & TDS Returns",
-            "Corporate Compliance",
-          ].map((service) => (
-            <div key={service} className="rounded-2xl border border-slate-200 p-6 shadow-sm">
-              <h3 className="text-base font-semibold text-slate-900">{service}</h3>
-              <p className="mt-3 text-sm text-slate-800">
-                End-to-end assistance with documentation, filings, and proactive compliance reminders.
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
+      
 
-      <section className="bg-blue-900">
-        <div className="w-full px-16 py-14 text-white">
-          <div className="flex flex-wrap items-center justify-between gap-6">
-            <div>
-              <h3 className="text-2xl font-semibold">Need help with business compliance?</h3>
-              <p className="mt-2 text-blue-100">
-                Speak with our experts for a tailored checklist and timeline for your organization.
-              </p>
-            </div>
-            <Link
-              to="/contact"
-              className="rounded-xl bg-white px-6 py-3 text-sm font-semibold text-blue-900"
-              title="Request a Call Back"
-            >
-              Request a Call Back
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        title="Need help with business compliance?"
+        description="Speak with our experts for a tailored checklist and timeline for your organization."
+        ctaLabel="Request a Call Back"
+        ctaTo="/contact"
+      />
     </div>
   );
 }
