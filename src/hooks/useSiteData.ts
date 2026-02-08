@@ -48,12 +48,12 @@ export default function useSiteData(): SiteData {
         email: "admin@aroraankitandassociates.com",
         phone: "+91-9999 241024",
         location: "Shahdara, East Delhi, Delhi, India 110092",
-        mapUrl: "https://maps.google.com",
+        mapUrl: "https://www.google.com/maps?output=embed&q=Shahdara%2C%20East%20Delhi%2C%20Delhi%2C%20India%20110092",
       },
       social: {
-        facebook: "https://facebook.com",
-        linkedin: "https://linkedin.com",
-        instagram: "https://instagram.com",
+        facebook: "https://www.facebook.com/gonardweb",
+        linkedin: "https://linkedin.com/company/gonardwebtechnologies",
+        instagram: "https://instagram.com/gonardweb",
       },
       navLinks: [
         {

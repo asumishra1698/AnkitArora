@@ -47,33 +47,45 @@ function Contact() {
               <li className="flex items-start gap-3">
                 <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-blue-50 text-blue-900">
                   <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-                    <path d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm3.9 7.6a4 4 0 11-7.8 0 4 4 0 017.8 0zM6.6 16.2a7.2 7.2 0 0110.8 0 8 8 0 11-10.8 0z" />
+                    <path d="M12 4l8 8-8 8v-5H4v-6h8V4z" />
                   </svg>
                 </span>
                 <span className="flex flex-wrap items-center gap-3">
                   <a
-                    className="font-medium text-slate-900 hover:text-blue-700"
+                    className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 text-slate-700 transition hover:border-blue-200 hover:text-blue-700"
                     href={social.facebook}
                     target="_blank"
                     rel="noreferrer"
+                    aria-label="Facebook"
+                    title="Facebook"
                   >
-                    Facebook
+                    <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                      <path d="M13 9h3V6h-3c-2.2 0-4 1.8-4 4v2H7v3h2v6h3v-6h3l1-3h-4v-2c0-.6.4-1 1-1z" />
+                    </svg>
                   </a>
                   <a
-                    className="font-medium text-slate-900 hover:text-blue-700"
+                    className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 text-slate-700 transition hover:border-blue-200 hover:text-blue-700"
                     href={social.linkedin}
                     target="_blank"
                     rel="noreferrer"
+                    aria-label="LinkedIn"
+                    title="LinkedIn"
                   >
-                    LinkedIn
+                    <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                      <path d="M4.5 3a2.5 2.5 0 110 5 2.5 2.5 0 010-5zM3 9h3v12H3zM10 9h3v1.7h.1c.5-1 1.7-2 3.6-2 3 0 4.3 1.9 4.3 5.1V21h-3v-6.1c0-1.8-.7-3-2.3-3-1.2 0-1.9.8-2.2 1.6-.1.3-.1.7-.1 1.1V21h-3z" />
+                    </svg>
                   </a>
                   <a
-                    className="font-medium text-slate-900 hover:text-blue-700"
+                    className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 text-slate-700 transition hover:border-blue-200 hover:text-blue-700"
                     href={social.instagram}
                     target="_blank"
                     rel="noreferrer"
+                    aria-label="Instagram"
+                    title="Instagram"
                   >
-                    Instagram
+                    <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                      <path d="M7 3h10a4 4 0 014 4v10a4 4 0 01-4 4H7a4 4 0 01-4-4V7a4 4 0 014-4zm10 2H7a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2zm-5 3.5A3.5 3.5 0 1112 16a3.5 3.5 0 010-7zm0 2a1.5 1.5 0 101.5 1.5A1.5 1.5 0 0012 10.5zM17.5 6.8a1 1 0 11-1 1 1 1 0 011-1z" />
+                    </svg>
                   </a>
                 </span>
               </li>
@@ -86,7 +98,7 @@ function Contact() {
               <iframe
                 title="Office location map"
                 src={contact.mapUrl}
-                className="h-64 w-full border-0 sm:h-[320px]"
+                className="h-64 w-full border-0 sm:h-[150px]"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
