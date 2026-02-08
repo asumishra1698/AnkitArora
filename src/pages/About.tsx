@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
+import { Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
 import Seo from "../components/Seo";
+import OurCustomers from "../components/OurCustomers";
 import useSiteData from "../hooks/useSiteData";
+import Reveal from "../components/Reveal";
 
 function About() {
   const { brand, contact } = useSiteData();
@@ -9,12 +15,17 @@ function About() {
     <div>
       <Seo
         title="About Us | Chartered Accountants in Delhi"
+        keywords="Chartered Accountants, Delhi, Business Registration, GST, ROC Filings, Audits, Advisory Services"
         description="Delhi-based chartered accountants for business registration, GST, ROC filings, audits, and advisory services."
       />
-      <section className="bg-slate-50">
-        <div className="w-full px-4 py-10 sm:px-8 sm:py-12 lg:px-16 lg:py-16">
-          <div className="grid items-center gap-10 md:grid-cols-2">
-            <div>
+      <Reveal>
+        <section
+          className="relative overflow-hidden bg-slate-50 bg-cover bg-center"
+          style={{ backgroundImage: "url(/hero.jpg)" }}
+        >
+          <div className="absolute inset-0 bg-white/60" />
+          <div className="relative w-full px-4 py-10 sm:px-8 sm:py-12 lg:px-16 lg:py-20">
+            <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
               <p className="text-sm font-semibold uppercase tracking-wide text-blue-700">Trusted advisors in Delhi</p>
               <h1 className="mt-4 text-4xl font-bold text-slate-900 md:text-5xl">
                 About Us
@@ -23,7 +34,7 @@ function About() {
                 {brand.tagline}. We help startups, NGOs, and growing businesses with registrations, taxation,
                 compliance, and audit services.
               </p>
-              <div className="mt-6 flex flex-wrap items-center gap-4">
+              <div className="mt-6 flex flex-wrap justify-center gap-4">
                 <Link
                   to="/contact"
                   className="rounded-xl bg-blue-900 px-6 py-3 text-sm font-semibold text-white shadow hover:bg-blue-800"
@@ -40,63 +51,144 @@ function About() {
                 </a>
               </div>
             </div>
-            <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
-              <h3 className="text-lg font-semibold text-slate-900">Why choose us</h3>
-              <ul className="mt-4 space-y-3 text-sm text-slate-800">
-                <li>Dedicated CA-led advisory team</li>
-                <li>On-time compliance and filing support</li>
-                <li>Transparent pricing and timelines</li>
-                <li>Personalized guidance for every stage</li>
-              </ul>
-              <div className="mt-6 rounded-2xl bg-blue-50 p-4 text-sm text-blue-900">
-                <p className="font-semibold">Office Location</p>
-                <p className="mt-1">{contact.location}</p>
-              </div>
-            </div>
           </div>
-        </div>
-      </section>
-
-      <section className="w-full px-16 py-14">
-        <h2 className="text-2xl font-semibold text-slate-900">Popular Services</h2>
-        <div className="mt-6 grid gap-6 md:grid-cols-3">
-          {[
-            "Company & LLP Registration",
-            "GST Registration & Filing",
-            "Trademark & IP Support",
-            "NGO Registration & Audit",
-            "Income Tax & TDS Returns",
-            "Corporate Compliance",
-          ].map((service) => (
-            <div key={service} className="rounded-2xl border border-slate-200 p-6 shadow-sm">
-              <h3 className="text-base font-semibold text-slate-900">{service}</h3>
-              <p className="mt-3 text-sm text-slate-800">
-                End-to-end assistance with documentation, filings, and proactive compliance reminders.
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="bg-blue-900">
-        <div className="w-full px-16 py-14 text-white">
-          <div className="flex flex-wrap items-center justify-between gap-6">
+        </section>
+      </Reveal>
+      <Reveal>
+        <section className="w-full px-4 py-14 sm:px-8 lg:px-16">
+          <div className="grid items-center gap-10 lg:grid-cols-2">
             <div>
-              <h3 className="text-2xl font-semibold">Need help with business compliance?</h3>
-              <p className="mt-2 text-blue-100">
-                Speak with our experts for a tailored checklist and timeline for your organization.
+              <h2 className="text-2xl font-semibold text-slate-900">About Arora Ankit And Associates</h2>
+              <p className="mt-4 text-base text-slate-800">
+                Arora Ankit And Associates is a Delhi-based chartered accountancy firm helping startups, SMEs, NGOs,
+                and professionals with registration, taxation, and compliance. As trusted Chartered Accountants in
+                Delhi, we guide clients through company registration, LLP formation, GST registration and filing, ROC
+                compliances, income tax returns, audits, and advisory services. Our approach combines clear checklists,
+                proactive reminders, and practical advice so founders can focus on growth while staying compliant with
+                MCA and tax regulations.
+              </p>
+              <p className="mt-4 text-base text-slate-800">
+                We believe compliance should be predictable and transparent. Our team supports you from the first
+                consultation to ongoing reporting, ensuring every filing is accurate and on time. Whether you are
+                setting up a new business, registering an NGO, or strengthening governance for an established company,
+                we tailor timelines and documentation to your needs. With a client-first mindset and detailed process
+                tracking, we deliver reliable outcomes for registration, audit, and advisory requirements across Delhi
+                and NCR.
               </p>
             </div>
-            <Link
-              to="/contact"
-              className="rounded-xl bg-white px-6 py-3 text-sm font-semibold text-blue-900"
-              title="Request a Call Back"
-            >
-              Request a Call Back
-            </Link>
+            <div
+              className="aspect-[3/2] w-full rounded-3xl bg-cover bg-center shadow-xl"
+              style={{ backgroundImage: "url(/3.webp)" }}
+              aria-label="Arora Ankit And Associates team in Delhi"
+              role="img"
+            />
           </div>
-        </div>
-      </section>
+        </section>
+      </Reveal>
+
+      <Reveal>
+        <section className="w-full px-4 pb-14 sm:px-8 lg:px-16">
+          <div className="flex items-end justify-between gap-6">
+            <div>
+              <h2 className="text-2xl font-semibold text-slate-900">Meet Our Team</h2>
+              <p className="mt-2 text-base text-slate-700">
+                Dedicated chartered accountants and compliance experts focused on accuracy, timelines, and clarity.
+              </p>
+            </div>
+            <div className="hidden text-sm font-semibold text-slate-500 md:block">Swipe to explore</div>
+          </div>
+
+          <div className="mt-8">
+            <Swiper
+              modules={[Navigation]}
+              className="team-swiper"
+              navigation
+              spaceBetween={24}
+              slidesPerView={1.1}
+              breakpoints={{
+                640: { slidesPerView: 1.4 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 4 },
+              }}
+            >
+              {[
+                {
+                  name: "Ankit Arora",
+                  role: "Founder & CA",
+                },
+                {
+                  name: "Neha Gupta",
+                  role: "Tax & Compliance",
+                },
+                {
+                  name: "Rohit Mehra",
+                  role: "Audit Lead",
+                },
+                {
+                  name: "Priya Sharma",
+                  role: "ROC & MCA Filings",
+                },
+                {
+                  name: "Saurabh Jain",
+                  role: "GST Advisory",
+                },
+                {
+                  name: "Kiran Malhotra",
+                  role: "Corporate Compliance",
+                },
+                {
+                  name: "Vivek Nair",
+                  role: "Direct Tax",
+                },
+                {
+                  name: "Aisha Khan",
+                  role: "NGO & CSR",
+                },
+              ].map((member) => (
+                <SwiperSlide key={member.name}>
+                  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-xl font-semibold text-blue-900">
+                      {member.name
+                        .split(" ")
+                        .map((part) => part[0])
+                        .join("")}
+                    </div>
+                    <h3 className="mt-4 text-lg font-semibold text-slate-900">{member.name}</h3>
+                    <p className="mt-1 text-sm text-slate-600">{member.role}</p>
+                    <p className="mt-3 text-sm text-slate-700">
+                      Focused on accuracy, proactive reporting, and keeping filings on track for every client.
+                    </p>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </section>
+      </Reveal>
+
+      <Reveal><OurCustomers /></Reveal>
+
+      <Reveal>
+        <section className="bg-blue-900">
+          <div className="w-full px-16 py-14 text-white">
+            <div className="flex flex-wrap items-center justify-between gap-6">
+              <div>
+                <h3 className="text-2xl font-semibold">Need help with business compliance?</h3>
+                <p className="mt-2 text-blue-100">
+                  Speak with our experts for a tailored checklist and timeline for your organization.
+                </p>
+              </div>
+              <Link
+                to="/contact"
+                className="rounded-xl bg-white px-6 py-3 text-sm font-semibold text-blue-900"
+                title="Request a Call Back"
+              >
+                Request a Call Back
+              </Link>
+            </div>
+          </div>
+        </section>
+      </Reveal>
     </div>
   );
 }

@@ -8,10 +8,14 @@ export const businessServices: ServiceCard[] = [
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
         <rect x="10" y="20" width="44" height="30" rx="4" fill="#2EAD4A" />
-        <path d="M24 20V16C24 13.8 25.8 12 28 12H36C38.2 12 40 13.8 40 16V20"
-          stroke="#1E7F36" stroke-width="3" fill="none" />
+        <path
+          d="M24 20V16C24 13.8 25.8 12 28 12H36C38.2 12 40 13.8 40 16V20"
+          stroke="#1E7F36"
+          strokeWidth="3"
+          fill="none"
+        />
         <rect x="30" y="32" width="4" height="6" rx="1" fill="#1E7F36" />
-        <line x1="10" y1="38" x2="54" y2="38" stroke="#1E7F36" stroke-width="2" />
+        <line x1="10" y1="38" x2="54" y2="38" stroke="#1E7F36" strokeWidth="2" />
       </svg>
 
     ),

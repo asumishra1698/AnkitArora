@@ -23,21 +23,40 @@ function isDescriptionColumn(value: string | DescriptionColumn): value is Descri
 }
 
 function SimplePage({ title, description, points, children, faqs, keywords }: SimplePageProps) {
-  const seoDescription = (() => {
-    if (typeof description === "string") {
+  const enhancedDescription = (() => {
+    if (typeof description !== "string") {
       return description;
     }
 
-    if (Array.isArray(description)) {
-      if (description.length === 0) {
+    const base = description.trim();
+    const lowerBase = base.toLowerCase();
+    const lowerTitle = title.toLowerCase();
+    const hasTitle = lowerBase.includes(lowerTitle);
+    const hasCompany = base.includes("Arora Ankit And Associates");
+    const hasDelhi = base.includes("Delhi NCR");
+
+    if (hasTitle && hasCompany && hasDelhi) {
+      return base;
+    }
+
+    return `${title} in Delhi NCR with Arora Ankit And Associates. ${base}`;
+  })();
+
+  const seoDescription = (() => {
+    if (typeof enhancedDescription === "string") {
+      return enhancedDescription;
+    }
+
+    if (Array.isArray(enhancedDescription)) {
+      if (enhancedDescription.length === 0) {
         return "";
       }
 
-      if (typeof description[0] === "string") {
-        return description.join(" ");
+      if (typeof enhancedDescription[0] === "string") {
+        return enhancedDescription.join(" ");
       }
 
-      return description
+      return enhancedDescription
         .filter(isDescriptionColumn)
         .flatMap((column) => column.items)
         .filter(Boolean)
@@ -54,7 +73,7 @@ function SimplePage({ title, description, points, children, faqs, keywords }: Si
         description={seoDescription}
         keywords={keywords}
       />
-      <BannerSection title={title} description={description}>
+      <BannerSection title={title} description={enhancedDescription}>
         {points && points.length > 0 ? (
           <div className="mb-8 grid gap-6 md:grid-cols-2">
             {points.map((column) => (

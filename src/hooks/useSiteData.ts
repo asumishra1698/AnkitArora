@@ -99,7 +99,7 @@ export default function useSiteData(): SiteData {
               title: "NGO Services",
               links: [
                 { label: "NGO Registration", to: "/ngo/ngo-registration" },
-                { label: "Section 8 NPO Registration", to: "/ngo/section-8" },
+                { label: "Section 8 NPon", to: "/ngo/section-8" },
                 { label: "Trust Registration", to: "/ngo/trust-registration" },
                 { label: "Society Registration", to: "/ngo/society-registration" },
                 { label: "NGO Darpan Registration", to: "/ngo/ngo-darpan" },

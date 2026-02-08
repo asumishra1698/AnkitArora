@@ -179,6 +179,11 @@ function Home() {
                 what is next and what is due. From company setup to ongoing compliance, we keep the process
                 structured, transparent, and stress-free.
               </p>
+              <p className="text-base leading-relaxed text-slate-800">
+                Based in Delhi, we serve startups, NGOs, and SMEs across India with registrations, GST, ROC
+                filings, audits, and advisory services. Our mission is to be the trusted financial partner that
+                helps your organization thrive.
+              </p>
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
                   <p className="text-xl font-semibold text-slate-900">15+ years</p>
@@ -211,7 +216,7 @@ function Home() {
                 <div className="absolute -right-6 top-6 h-full w-full rounded-[28px] border border-blue-200/60 bg-blue-50" />
                 <div className="relative overflow-hidden rounded-[28px] border border-slate-200 bg-white p-6 shadow-xl">
                   <img
-                    src="/2.webp"
+                    src="/3.webp"
                     alt="Arora Ankit & Associates"
                     title="Arora Ankit & Associates"
                     className="h-auto w-full rounded-2xl object-cover bg-slate-50"

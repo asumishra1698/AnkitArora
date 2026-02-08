@@ -69,7 +69,7 @@ function LLPRegistration() {
     >
       <section className="rounded-3xl bg-white p-6 shadow-xl space-y-10 sm:p-8">
         <div>
-          <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Meaning of LLP</h2>
+          <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Meaning of Limited Liability Partnership</h2>
           <p className="mt-3 text-base text-slate-800">
             A Limited Liability Partnership (LLP) combines partnership flexibility with limited liability. Each
             partner is liable only to the extent of their contribution, and the misconduct or negligence of one
@@ -128,7 +128,7 @@ function LLPRegistration() {
         </div>
 
         <div>
-          <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Basic Requirements to Incorporate</h2>
+          <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Basic Requirements to Incorporate LLP</h2>
           <ul className="mt-5 space-y-4 list-disc pl-6">
             {[
               "Minimum two designated partners",
@@ -145,7 +145,7 @@ function LLPRegistration() {
         </div>
 
         <div>
-          <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Documents Required</h2>
+          <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Documents Required for LLP Registration</h2>
           <ul className="mt-5 space-y-4 list-disc pl-6">
             {[
               "PAN or passport (for foreign partners)",

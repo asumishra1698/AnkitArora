@@ -1,11 +1,13 @@
-import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import useSiteData from "../hooks/useSiteData";
 
 function Header() {
   const { brand, contact, navLinks, social } = useSiteData();
+  const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileSections, setMobileSections] = useState<Record<string, boolean>>({});
+  const [desktopOpen, setDesktopOpen] = useState<string | null>(null);
 
   const toggleMobileSection = (key: string) => {
     setMobileSections((prev) => {
@@ -16,6 +18,12 @@ function Header() {
       return { ...nextState, [key]: !prev[key] };
     });
   };
+
+  useEffect(() => {
+    setMobileOpen(false);
+    setMobileSections({});
+    setDesktopOpen(null);
+  }, [location.pathname]);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-200 shadow-sm backdrop-blur-sm transition-all duration-300">
@@ -63,7 +71,7 @@ function Header() {
               title="LinkedIn"
             >
               <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-                <path d="M6.94 8.5H3.5V21h3.44V8.5zM5.22 3a2 2 0 00-2.22 2 2.02 2.02 0 002.24 2 2 2 0 00-.02-4zM20.5 13.5c0-3.2-1.7-5.2-4.6-5.2-2.1 0-3.1 1.2-3.6 2v-1.8H8.9V21h3.44v-6.7c0-1.8.3-3.6 2.6-3.6 2.3 0 2.3 2.1 2.3 3.7V21h3.26v-7.5z" />
+                <path d="M6.94 8.5H3.5V21h3.44V8.5zM5.22 3a2 2 0 0 0 -2.22 2 2.02 2.02 0 0 0 2.24 2 2 2 0 0 0 -0.02-4zM20.5 13.5c0-3.2-1.7-5.2-4.6-5.2-2.1 0-3.1 1.2-3.6 2v-1.8H8.9V21h3.44v-6.7c0-1.8.3-3.6 2.6-3.6 2.3 0 2.3 2.1 2.3 3.7V21h3.26v-7.5z" />
               </svg>
             </a>
             <a
@@ -73,7 +81,7 @@ function Header() {
               title="Instagram"
             >
               <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-                <path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3.5a4.5 4.5 0 110 9 4.5 4.5 0 010-9zm0 2a2.5 2.5 0 100 5 2.5 2.5 0 000-5zm5.2-2.3a1 1 0 11-2 0 1 1 0 012 0z" />
+                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5H7a5 5 0 0 1 -5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0 -3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0 -3-3H7zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zm5.2-2.3a1 1 0 1 1 -2 0 1 1 0 0 1 2 0z" />
               </svg>
             </a>
           </div>
@@ -98,13 +106,19 @@ function Header() {
           <nav className="hidden flex-wrap items-center gap-6 text-sm font-medium text-slate-700 md:flex">
             {navLinks.map((link) =>
               link.dropdownSections ? (
-                <div key={link.to} className="relative group">
+                <div
+                  key={link.to}
+                  className="relative"
+                  onMouseEnter={() => setDesktopOpen(link.to)}
+                  onMouseLeave={() => setDesktopOpen(null)}
+                >
                   <NavLink
                     to={link.to}
                     className={({ isActive }) =>
                       `flex items-center gap-1 transition ${isActive ? "text-blue-700" : "hover:text-blue-700"}`
                     }
                     title={link.label}
+                    onClick={() => setDesktopOpen(null)}
                   >
                     {link.label}
                     <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
@@ -112,7 +126,7 @@ function Header() {
                     </svg>
                   </NavLink>
                   <div
-                    className={`invisible absolute top-full z-20 translate-y-2 rounded-2xl border border-slate-200 bg-white p-6 shadow-xl opacity-0 transition-all duration-200 ease-out delay-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-hover:delay-0 ${link.label === "Compliances"
+                    className={`absolute top-full z-20 translate-y-2 rounded-2xl border border-slate-200 bg-white p-6 shadow-xl opacity-0 transition-all duration-200 ease-out ${desktopOpen === link.to ? "visible translate-y-0 opacity-100" : "invisible"} ${link.label === "Compliances"
                         ? "left-1/2 -translate-x-1/2"
                         : "left-0"
                       } ${link.dropdownSections.length >= 3
@@ -147,6 +161,7 @@ function Header() {
                                   }`
                                 }
                                 title={child.label}
+                                onClick={() => setDesktopOpen(null)}
                               >
                                 {child.label}
                               </NavLink>
@@ -158,20 +173,28 @@ function Header() {
                   </div>
                 </div>
               ) : link.children ? (
-                <div key={link.to} className="relative group">
+                <div
+                  key={link.to}
+                  className="relative"
+                  onMouseEnter={() => setDesktopOpen(link.to)}
+                  onMouseLeave={() => setDesktopOpen(null)}
+                >
                   <NavLink
                     to={link.to}
                     className={({ isActive }) =>
                       `flex items-center gap-1 transition ${isActive ? "text-blue-700" : "hover:text-blue-700"}`
                     }
                     title={link.label}
+                    onClick={() => setDesktopOpen(null)}
                   >
                     {link.label}
                     <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
                       <path d="M5.3 7.3a1 1 0 011.4 0L10 10.6l3.3-3.3a1 1 0 111.4 1.4l-4 4a1 1 0 01-1.4 0l-4-4a1 1 0 010-1.4z" />
                     </svg>
                   </NavLink>
-                  <div className="absolute left-0 top-full z-20 hidden w-[340px] rounded-2xl border border-slate-200 bg-white p-4 shadow-lg group-hover:block">
+                  <div
+                    className={`absolute left-0 top-full z-20 w-[340px] rounded-2xl border border-slate-200 bg-white p-4 shadow-lg ${desktopOpen === link.to ? "block" : "hidden"}`}
+                  >
                     <div className="grid gap-2">
                       {link.children.map((child) => (
                         <NavLink
@@ -182,6 +205,7 @@ function Header() {
                             }`
                           }
                           title={child.label}
+                          onClick={() => setDesktopOpen(null)}
                         >
                           {child.label}
                         </NavLink>

@@ -34,3 +34,7 @@
   }
 }
 
+.team-swiper {
+  --swiper-navigation-size: 24px;
+}
+
