@@ -25,7 +25,7 @@ function Footer() {
 
   return (
     <footer className="relative bg-blue-900 text-white">
-      <div className="w-full px-16 py-12">
+      <div className="w-full px-6 py-10 sm:px-8 sm:py-12 md:px-12 lg:px-16">
         <div className="grid gap-10 md:grid-cols-4">
           {footerGroups.map((group) => (
             <div key={group.title}>
@@ -96,7 +96,7 @@ function Footer() {
       </div>
 
       <div className="border-t border-blue-800/60 bg-blue-950 text-blue-100">
-        <div className="flex w-full flex-wrap items-center justify-between gap-4 px-16 py-4 text-sm">
+        <div className="flex w-full flex-wrap items-center justify-between gap-4 px-6 py-10 sm:px-8 sm:py-12 md:px-12 lg:px-16 text-sm">
           <span>Copyright © 2026 Arora Ankit & Associates. All Rights Reserved</span>
           <div className="flex items-center gap-4">
             <Link to="/disclaimer" className="hover:text-white" title="Disclaimer">

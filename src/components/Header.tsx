@@ -20,9 +20,9 @@ function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-200 shadow-sm backdrop-blur-sm transition-all duration-300">
       <div className="bg-blue-900 text-white">
-        <div className="flex w-full flex-col items-start gap-2 px-4 py-2 text-sm md:flex-row md:items-center md:justify-between md:px-16">
-          <div className="flex flex-wrap items-center gap-6">
-            <span className="flex items-center gap-2">
+        <div className="flex w-full items-center justify-between gap-3 px-4 py-2 text-sm md:px-16">
+          <div className="flex items-center gap-6">
+            <span className="hidden items-center gap-2 whitespace-nowrap md:flex">
               <svg
                 className="h-4 w-4"
                 viewBox="0 0 24 24"
@@ -33,7 +33,7 @@ function Header() {
               </svg>
               {contact.email}
             </span>
-            <span className="flex items-center gap-2">
+            <span className="flex items-center gap-2 whitespace-nowrap">
               <svg
                 className="h-4 w-4"
                 viewBox="0 0 24 24"
@@ -84,7 +84,12 @@ function Header() {
         <div className="flex w-full items-center justify-between gap-4 px-4 py-4 md:flex-wrap md:px-16">
           <Link to="/" className="flex items-center gap-3 shrink-0" title={brand.name}>
             <div>
-              <img src={brand.logo} alt={brand.name} title={brand.name} className="h-12 w-full" />
+              <img
+                src={brand.logo}
+                alt={brand.name}
+                title={brand.name}
+                className="h-auto w-auto max-w-[180px] sm:h-auto sm:max-w-[200px] md:h-auto md:max-w-[280px]"
+              />
               {/* <p className="text-lg font-semibold text-slate-900">{brand.name}</p> */}
               {/* <p className="text-xs text-slate-500">{brand.tagline}</p> */}
             </div>
@@ -235,12 +240,12 @@ function Header() {
             aria-hidden
           />
           <div
-            className={`fixed left-0 top-0 z-9999 h-full w-[420px] bg-white shadow-2xl transition-transform duration-200 ${mobileOpen ? "translate-x-0" : "-translate-x-full"
+            className={`fixed left-0 top-0 z-9999 h-full w-[90vw] max-w-[420px] bg-white shadow-2xl transition-transform duration-200 sm:w-[420px] ${mobileOpen ? "translate-x-0" : "-translate-x-full"
               }`}
           >
             <div className="flex items-center justify-between border-b border-slate-200 px-4 py-4">
               <div className="flex items-center gap-3">
-                <img src={brand.logo} alt={brand.name} title={brand.name} className="h-10" />
+                <img src={brand.logo} alt={brand.name} title={brand.name} className="h-8" />
               </div>
               <button
                 type="button"
