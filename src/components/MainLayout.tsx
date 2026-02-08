@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Footer from "./Footer";
 import Header from "./Header";
+import CookieConsent from "./CookieConsent";
 import ScrollToTop from "./ScrollToTop";
 
 function MainLayout() {
@@ -39,6 +40,7 @@ function MainLayout() {
         <Outlet />
       </main>
       <Footer />
+      <CookieConsent />
     </div>
   );
 }
