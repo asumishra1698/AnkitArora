@@ -29,7 +29,7 @@ function Footer() {
         <div className="grid gap-10 md:grid-cols-4">
           {footerGroups.map((group) => (
             <div key={group.title}>
-              <h3 className="text-base font-semibold">{group.title}</h3>
+              <h4 className="text-base font-semibold">{group.title}</h4>
               <ul className="mt-4 space-y-2 text-sm text-blue-100">
                 {group.links.map((link) => (
                   <li key={link.label}>
@@ -43,7 +43,7 @@ function Footer() {
           ))}
 
           <div>
-            <h3 className="text-base font-semibold">Get Contact</h3>
+            <h4 className="text-base font-semibold">Get Contact</h4>
             <ul className="mt-4 space-y-3 text-sm text-blue-100">
               <li>Phone: {contact.phone}</li>
               <li>E-mail: {contact.email}</li>
@@ -96,7 +96,7 @@ function Footer() {
       </div>
 
       <div className="border-t border-blue-800/60 bg-blue-950 text-blue-100">
-        <div className="flex w-full flex-wrap items-center justify-between gap-4 px-6 py-10 sm:px-8 sm:py-12 md:px-12 lg:px-16 text-sm">
+        <div className="flex w-full flex-wrap items-center justify-between gap-4 px-6 py-2 sm:px-8 sm:py-2 md:px-12 lg:px-16 text-sm">
           <span>Copyright © 2026 Arora Ankit & Associates. All Rights Reserved</span>
           <div className="flex items-center gap-4">
             <Link to="/disclaimer" className="hover:text-white" title="Disclaimer">

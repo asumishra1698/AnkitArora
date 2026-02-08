@@ -36,10 +36,12 @@ function BannerSection({ title, description, formTitle = "Get a Consultation by 
     return (
         <section className="bg-slate-50">
             <div className="w-full px-4 py-10 sm:px-8 sm:py-12 lg:px-16 lg:py-16">
-                <div className="grid items-start gap-10 md:grid-cols-12">
-                    <div className="md:col-span-8">
+                <div className="grid items-start gap-10 lg:grid-cols-12">
+                    <div className="min-w-0 lg:col-span-8">
                         <p className="text-sm font-semibold uppercase tracking-wide text-blue-700">Trusted advisors in Delhi</p>
-                        <h1 className="mt-4 text-4xl font-bold text-slate-900 md:text-5xl">{title}</h1>
+                        <h1 className="mt-4 max-w-full break-words text-3xl font-bold text-slate-900 sm:text-4xl lg:text-5xl">
+                            {title}
+                        </h1>
                         {isColumnDescription ? (
                             <div className="mt-6 grid gap-8 md:grid-cols-2">
                                 {(description as DescriptionColumn[]).map((column) => (
@@ -87,7 +89,7 @@ function BannerSection({ title, description, formTitle = "Get a Consultation by 
                                 ))}
                             </ul>
                         ) : (
-                            <div className="mt-4 space-y-4 text-lg text-slate-800">
+                            <div className="mt-4 max-w-full break-words space-y-4 text-base text-slate-800 sm:text-lg">
                                 {paragraphParts.map((part, index) => (
                                     <p key={`${title}-desc-${index}`}>{part}</p>
                                 ))}
@@ -96,16 +98,22 @@ function BannerSection({ title, description, formTitle = "Get a Consultation by 
                         <div className="mt-6 flex flex-wrap items-center gap-4">
                             <a
                                 href={`tel:${contact.phone.replace(/\s+/g, "")}`}
-                                className="inline-flex items-center justify-center rounded-xl border border-blue-900 px-6 py-3 text-sm font-semibold text-blue-900 hover:bg-blue-50"
+                                className="inline-flex items-center justify-center gap-2 rounded-xl border border-blue-900 px-5 py-3 text-sm font-semibold text-blue-900 hover:bg-blue-50"
                                 title={`Call ${contact.phone}`}
                             >
-                                Call {contact.phone}
+                                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                                    <path d="M6.6 10.8a15.6 15.6 0 006.6 6.6l2.2-2.2a1 1 0 011-.2 11.4 11.4 0 003.6.6 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.4a1 1 0 011 1 11.4 11.4 0 00.6 3.6 1 1 0 01-.2 1l-2.2 2.2z" />
+                                </svg>
+                                Call Us
                             </a>
                             <a
                                 href={`mailto:${contact.email}`}
-                                className="inline-flex items-center justify-center rounded-xl bg-blue-900 px-6 py-3 text-sm font-semibold text-white shadow hover:bg-blue-800"
+                                className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-900 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-blue-800"
                                 title={`Email ${contact.email}`}
                             >
+                                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                                    <path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm0 2v.01L12 13l8-6.99V6H4zm0 12h16V8l-8 7-8-7v10z" />
+                                </svg>
                                 Email Us
                             </a>
                         </div>
