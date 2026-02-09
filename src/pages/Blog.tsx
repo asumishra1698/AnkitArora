@@ -3,7 +3,7 @@ import CTASection from "../components/CTASection";
 import Seo from "../components/Seo";
 import Reveal from "../components/Reveal";
 import useSiteData from "../hooks/useSiteData";
-
+import { blogPosts } from "../posts";
 function Blog() {
   const { brand, contact } = useSiteData();
   return (
@@ -23,7 +23,7 @@ function Blog() {
             <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
               <p className="text-sm font-semibold uppercase tracking-wide text-blue-700">Trusted advisors in Delhi</p>
               <h1 className="mt-4 text-4xl font-bold text-slate-900 md:text-5xl">
-               Blogs
+                Blogs
               </h1>
               <p className="mt-4 text-lg text-slate-800">
                 {brand.tagline}. We help startups, NGOs, and growing businesses with registrations, taxation,
@@ -50,7 +50,26 @@ function Blog() {
         </section>
       </Reveal>
 
-      
+      <section className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-8 sm:py-12 lg:px-16 lg:py-16">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {blogPosts.map((post) => (
+            <Link
+              key={post.slug}
+              to={`/blog/${post.slug}`}
+              className="group block rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+            >
+              <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">{post.date}</p>
+              <h2 className="mt-3 text-xl font-semibold text-slate-900 group-hover:text-blue-900">
+                {post.title}
+              </h2>
+              <p className="mt-3 text-sm text-slate-700">{post.excerpt}</p>
+              <span className="mt-4 inline-flex items-center text-sm font-semibold text-blue-700 group-hover:text-blue-800">
+                Read more
+              </span>
+            </Link>
+          ))}
+        </div>
+      </section>
 
       <CTASection
         title="Need help with business compliance?"

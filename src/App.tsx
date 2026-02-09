@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import MainLayout from "./components/MainLayout";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import Compliances from "./pages/Compliances";
 import Contact from "./pages/Contact";
 import Disclaimer from "./pages/Disclaimer";
@@ -118,6 +119,7 @@ function App() {
         <Route path="/compliances/nri-taxation" element={<NRITaxation />} />
         <Route path="/compliances/strike-off-section-8" element={<StrikeOffSection8 />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/disclaimer" element={<Disclaimer />} />
