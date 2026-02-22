@@ -131,7 +131,7 @@ function Home() {
 
       <section
         className="relative overflow-hidden bg-slate-50 bg-cover bg-center"
-        style={{ backgroundImage: "url(/hero.jpg)" }}
+        style={{ backgroundImage: "url(/hero2.jpg)" }}
       >
         <div className="absolute inset-0 bg-white/60" />
         <div className="relative w-full px-4 py-10 sm:px-8 sm:py-12 lg:px-16 lg:py-48">
